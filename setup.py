@@ -70,8 +70,8 @@ TRAINER_DARWIN_CUSTOM_COMMANDS = [['brew', 'update'],
 class PostInstall(install):
 
     def run(self):
-        deps = 'https://github.com/leigh-johnson/Tensorflow-bin/releases/download/v2.2.0/tensorflow-2.2.0-cp37-cp37m-linux_armv7l.whl'
-
+        deps = 'https://github.com/bitsy-ai/tensorflow-arm-bin/releases/download/v2.4.0/tensorflow-2.4.0-cp37-none-linux_armv7l.whl'        
+        
         install.run(self)
         # https://pip.pypa.io/en/stable/user_guide/#using-pip-from-your-program
         subprocess.call([sys.executable, '-m', 'pip',
@@ -110,7 +110,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/leigh-johnson/rpi-deep-pantilt',
+    url='https://github.com/bitsy-ai/rpi-deep-pantilt',
     version='1.2.1',
     zip_safe=False,
 
